@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Sonuçları</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__text">
+            <h1>Formunuz başarıyla gönderildi!</h1>
+            <p>Verileriniz kaydedildi. Teşekkür ederiz.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="form">
+            <h2>Gönderdiğiniz Bilgiler</h2>
+
+            <p><strong>Adınız:</strong> {{ name }}</p>
+            <p><strong>E-posta:</strong> {{ email }}</p>
+            <p><strong>Adresiniz:</strong> {{ address }}</p>
+            <p><strong>Uygun Tarih:</strong> {{ date }}</p>
+
+            <a href="{{ url_for('form') }}">Forma Geri Dön</a>
+        </div>
+    </main>
+
+</body>
+</html>
